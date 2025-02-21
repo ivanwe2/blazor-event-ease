@@ -48,6 +48,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/source/Blazor-All/Blazor-EventEase/EventEase/Pages/Users/ListUsers.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcTGlzdFVzZXJzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/source/Blazor-All/Blazor-EventEase/EventEase/Pages/Users/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/source/Blazor-All/Blazor-EventEase/EventEase/Pages/Users/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcUmVnaXN0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/source/Blazor-All/Blazor-EventEase/EventEase/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

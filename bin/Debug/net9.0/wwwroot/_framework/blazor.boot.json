@@ -1,10 +1,11 @@
 {
   "mainAssemblyName": "EventEase",
   "resources": {
-    "hash": "sha256-yuw9m2pPCjS6gZ4mDrYcI+MORyW5xF0viwutHQE1Jyw=",
+    "hash": "sha256-1jw4esmJOWZHZ9epAHJzjz89REmDuRCsanOMd8cUvvI=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.esv38zo127.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.cwj0bpb71v.wasm": "Microsoft.AspNetCore.Components.wasm",
+      "Microsoft.AspNetCore.Components.Authorization.f7z3anr7a9.wasm": "Microsoft.AspNetCore.Components.Authorization.wasm",
       "Microsoft.AspNetCore.Components.Forms.aq1ir8e8pl.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
       "Microsoft.AspNetCore.Components.Web.9j9suo3916.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
       "Microsoft.AspNetCore.Components.WebAssembly.b0sosqcdpj.wasm": "Microsoft.AspNetCore.Components.WebAssembly.wasm",
@@ -201,8 +202,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "EventEase.sqej1qak4v.wasm": "EventEase.wasm",
-      "EventEase.btderon6rj.pdb": "EventEase.pdb"
+      "EventEase.b1lv2pdegx.wasm": "EventEase.wasm",
+      "EventEase.alket93mk5.pdb": "EventEase.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.8bti36lthm.js": "sha256-HFADmT26AarHu4tMjFaTPxINmQjBJGtdPN+CKjtNMFE="
@@ -225,6 +226,7 @@
     "assembly": {
       "Microsoft.AspNetCore.Authorization.esv38zo127.wasm": "sha256-rvfJ4vWD9REicee49XUtbmMWVdG0gSGCfb9oZFv9gkY=",
       "Microsoft.AspNetCore.Components.cwj0bpb71v.wasm": "sha256-RDzFNwWFeDHfByrpBjtoeDosPx0W+62WnUqQnxj4pzs=",
+      "Microsoft.AspNetCore.Components.Authorization.f7z3anr7a9.wasm": "sha256-+0pw8eh9ess7ISQ+PBhRIIUqqkQNxObNR00MmvBkPlY=",
       "Microsoft.AspNetCore.Components.Forms.aq1ir8e8pl.wasm": "sha256-QtQH0F71sC0xN/8FWFAnruXDnbOacIsCWaGtPYIgPHM=",
       "Microsoft.AspNetCore.Components.Web.9j9suo3916.wasm": "sha256-Rc0KH0I348MJ2xeFIvhkZOlzzGjJINVCTqBTFSEHTT4=",
       "Microsoft.AspNetCore.Components.WebAssembly.b0sosqcdpj.wasm": "sha256-y+dm9A6GzSMucTLUWmYqGchCJxlAAIiPswzCO4UVFi0=",
@@ -412,10 +414,10 @@
       "WindowsBase.tuf34ieu7y.wasm": "sha256-Bd+l972cOS1eVeLzrQNlgD6LPWV1QXBSzJhv8Tx1WGI=",
       "mscorlib.5q5u0swn6q.wasm": "sha256-g9cI1sECkF7bxMqOSB+W0a4utdDsqTrqZzyiAEeA65g=",
       "netstandard.w8gk1pigg1.wasm": "sha256-QFR5QNPfvyZTexW3IA/AFx6ZmIF/TecvOUsSK4gM4po=",
-      "EventEase.sqej1qak4v.wasm": "sha256-ZLof6618fe8hNJj6NHdVW8KKpV8soxz7tX3Dx5f9pRA="
+      "EventEase.b1lv2pdegx.wasm": "sha256-PxIz0QN00+R+nPBE4ZN42ryHG+inTKyvUlNWhFHSrsA="
     },
     "pdb": {
-      "EventEase.btderon6rj.pdb": "sha256-b4iE5AU9cc8+ao7mkQ3ZT5BXGTjPtvzpBFgI6zf5oYI="
+      "EventEase.alket93mk5.pdb": "sha256-Qu//P0eojk2VAJZTQFZo6B7Fv9Y9ks5/ej4kgaDeLH4="
     }
   },
   "cacheBootResources": true,

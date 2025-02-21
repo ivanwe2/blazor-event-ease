@@ -1,4 +1,6 @@
 @inject NavigationManager NavigationManager
+@inject AttendanceService AttendanceService
+@inject UserSessionService UserSessionService
 @code {
     [Parameter]
     public Event? Event { get; set; }
@@ -10,12 +12,35 @@
     {
         NavigationManager.NavigateTo($"/events/{Event!.Id}");
     }
+
+    private async Task AttendEvent()
+    {
+        var authState = await UserSessionService.GetAuthenticationStateAsync();
+        var username = authState.User?.Identity?.Name;
+
+        if (username != null && Event != null)
+        {
+            if (!Event.Attendees.Contains(username))
+            {
+                Event.Attendees.Add(username);
+                await AttendanceService.SaveAttendanceAsync(new Attendance
+                {
+                    Id = Guid.NewGuid(),
+                    EventId = Event.Id,
+                    UserName = username,
+                    Timestamp = DateTime.Now
+                });
+            }
+        }
+    }
 }
 
 <div class="event-card">
     <p><strong>Name:</strong> @Event?.Name</p>
     <p><strong>Date:</strong> @Event?.Date.ToShortDateString()</p>
     <p><strong>Location:</strong> @Event?.Location</p>
+    <p><strong>Atendees:</strong> @Event?.Attendees.Count</p>
     <button @onclick="() => NavigateToDetailsPage()">Details</button>
     <button @onclick="() => OnDelete.InvokeAsync(Event!.Id)">Delete</button>
+    <button @onclick="AttendEvent">Attend</button>
 </div>

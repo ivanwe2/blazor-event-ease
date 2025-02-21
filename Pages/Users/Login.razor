@@ -1,0 +1,48 @@
+@page "/login"
+@inject IUserService UserService
+@inject UserSessionService UserSessionService
+@inject NavigationManager NavigationManager
+
+<h3>Login</h3>
+
+<EditForm Model="loginModel" OnValidSubmit="LoginUser">
+    <DataAnnotationsValidator />
+
+    <div>
+        <label>Email:</label>
+        <InputText @bind-Value="loginModel.Email" />
+        <ValidationMessage For="@(() => loginModel.Email)" />
+    </div>
+    <div>
+        <label>Password:</label>
+        <InputText @bind-Value="loginModel.Password" type="password" />
+        <ValidationMessage For="@(() => loginModel.Password)" />
+    </div>
+    <button type="submit">Login</button>
+</EditForm>
+
+@code {
+    private class UserLoginModel 
+    {
+        public string Email { get; set; } = "";
+        public string Password { get; set; } = "";
+    }
+
+    private UserLoginModel loginModel = new UserLoginModel();
+
+    private async Task LoginUser()
+    {
+        var users = await UserService.GetUsersAsync();
+        var user = users.FirstOrDefault(u => u.Email == loginModel.Email && u.Password == loginModel.Password);
+        if (user != null)
+        {
+            await UserService.SaveUserAsync(user);
+            UserSessionService.Login(user);
+            NavigationManager.NavigateTo("/users");
+        }
+        else
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+}

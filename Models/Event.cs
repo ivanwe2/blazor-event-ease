@@ -17,4 +17,6 @@ public class Event
     [Required]
     [StringLength(200, MinimumLength = 5, ErrorMessage = "Location must be between 5 and 200 characters.")]
     public string Location { get; set; } = string.Empty;
+
+    public List<string> Attendees { get; set; } = new List<string>();
 }

@@ -1,0 +1,37 @@
+@page "/register"
+@inject IUserService UserService
+
+<h3>Register</h3>
+
+<EditForm Model="newUser" OnValidSubmit="RegisterUser">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>Name:</label>
+        <InputText @bind-Value="newUser.Name" />
+        <ValidationMessage For="@(() => newUser.Name)" />
+    </div>
+    <div>
+        <label>Email:</label>
+        <InputText @bind-Value="newUser.Email" />
+        <ValidationMessage For="@(() => newUser.Email)" />
+    </div>
+    <div>
+        <label>Password:</label>
+        <InputText @bind-Value="newUser.Password" type="password" />
+        <ValidationMessage For="@(() => newUser.Password)" />
+    </div>
+    <button type="submit">Register</button>
+</EditForm>
+
+@code {
+    private User newUser = new User();
+
+    private async Task RegisterUser()
+    {
+        newUser.Id = Guid.NewGuid();
+        await UserService.SaveUserAsync(newUser);
+        newUser = new User(); // Reset the form
+    }
+}
