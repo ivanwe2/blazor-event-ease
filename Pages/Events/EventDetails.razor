@@ -1,0 +1,30 @@
+@page "/events/{eventId:guid}"
+@inject IEventService EventService
+@code {
+    [Parameter]
+    public Guid EventId { get; set; }
+
+    private Event? eventDetails;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var events = await EventService.GetEventsAsync();
+        eventDetails = events.FirstOrDefault(e => e.Id == EventId)
+                    ?? throw new ArgumentException("Event not found");
+    }
+}
+
+<h3>Event Details</h3>
+
+@if (eventDetails is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <div class="event-details">
+        <p><strong>Name:</strong> @eventDetails.Name</p>
+        <p><strong>Date:</strong> @eventDetails.Date.ToShortDateString()</p>
+        <p><strong>Location:</strong> @eventDetails.Location</p>
+    </div>
+}
